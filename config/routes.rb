@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :categories
   resources :products
   resources :static_pages
 root to: 'products#index'
