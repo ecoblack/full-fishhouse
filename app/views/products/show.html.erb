@@ -1,14 +1,30 @@
-<p id="notice"><%= notice %></p>
+<div>
+	<ul class="breadcrumb">
+  <li><a href="/"><%= link_to "Категории", categories_path   %></a></li>
+  <li><a href="#"><%= link_to  @product.category.name, category_path(@product.category_id) %></a></li>
+  <li><%=  link_to @product.name, product_path %></li>
+</ul>
+	<p id="notice"><%= notice %></p>
 
+ <div class="row" style="margin-right:3%!important;">
 <p>
-  <strong>Name:</strong>
-  <%= @product.name %>
+  <h3><%= @product.name %></h3>
+  
 </p>
-
+<div class="col-md-8" style="margin-left:10%!important; margin-right:5%!important;">
+            <%= image_tag @product.image, class: 'img-responsive', style: 'display:block; width: 75%; height:auto;' %>
+        </div>
 <p>
-  <strong>Desc:</strong>
-  <%= @product.desc %>
+  <strong>Описание:</strong>
+  <%= @product.body %>
 </p>
+<p>
+  <strong>Где купить:</strong>
+  <%= @product.shops %>
+</p>
+<hr>
+<p><%= link_to 'Назад', category_path(@product.category_id) %> </p>
+</div>
+</div>
+    <!-- /.row -->
 
-<%= link_to 'Edit', edit_product_path(@product) %> |
-<%= link_to 'Back', products_path %>

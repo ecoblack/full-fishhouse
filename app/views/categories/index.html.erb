@@ -1,25 +1,57 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Categories</h1>
 
-<table>
-  <thead>
-    <tr>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
 
-  <tbody>
+
+
+<h2>Категории продукции</h1>
+
+<div style="margin-left: 4%!important;border-style:none!important;">
+ 
+    
+   
+  
+<ul class="breadcrumb">
+ 
     <% @categories.each do |category| %>
-      <tr>
-        <td><%= link_to 'Show', category %></td>
-        <td><%= link_to 'Edit', edit_category_path(category) %></td>
-        <td><%= link_to 'Destroy', category, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
+
+    
+              
+        <li style="font-size: 1.2em;"><%= link_to category.name, category %> </li>
+        
+        <% end %>
+        
+    </ul>  
+    
+ 
+</div>
 
 <br>
+           
+<section>
+      <div class="container">
+        
+        <hr>
+        <div class="row">
+            <% @categories.each do |category| %>
 
-<%= link_to 'New Category', new_category_path %>
+       
+          <div class="col-md-6 col-lg-4" style="height: 250px;
+    /*width: 400px;*/
+    overflow: hidden;">
+    
+            
+              <div class="portfolio-item-caption d-flex position-absolute h-100 w-100">
+                <div class="portfolio-item-caption-content my-auto w-100 text-center text-white">
+                <!--<h4><%= link_to category.name, category %></h4>-->
+                </div>
+              </div>
+              <%= image_tag category.image, class: 'img-responsive', style: "
+    width: 100%;" %>
+          
+          </div>
+          
+            <% end %> 
+      </div>
+          
+</section>

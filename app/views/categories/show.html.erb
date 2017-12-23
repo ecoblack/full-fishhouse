@@ -1,4 +1,38 @@
 <p id="notice"><%= notice %></p>
+<!-- Breadcrumbs -->
+<ul class="breadcrumb">
+  <li><%= link_to 'Назад к категориям', categories_path %></li>
+  <li><a href="#"><%= @category.name %></a></li>
+  
+</ul>
+<!-- Breadcrumbs end -->
+ 
+<h3> Продукция категории </h3>
 
-<%= link_to 'Edit', edit_category_path(@category) %> |
-<%= link_to 'Back', categories_path %>
+<section  id="portfolio" style="margin-left:5%!important;">
+
+     
+
+   
+<% Product.where(category_id: @category.id).each do |product| %>
+          <div class="col-lg-4 col-sm-6">
+          
+            
+            <%= image_tag product.image, class: 'img-responsive', size: "300" %>
+              <div class="portfolio-box-caption">
+              
+                  <h4 style="text-decoration:none!important;">
+                    <%= link_to product.name, product %>
+                  </h4>
+               
+              </div>
+         
+          </div>
+          <% end %>
+       
+
+
+
+    </section>
+    
+<div style="margin-left:5%!important;"><%= link_to 'Назад', categories_path, style: "text-decoration:underline;" %></div>
