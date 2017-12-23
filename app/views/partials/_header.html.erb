@@ -22,20 +22,17 @@
           
                 <li class="active">
                 
-                      <% Category.where(parent_id: 25).each do |category| %>
+                      <% Category.where(parent_id: 1).each do |category| %>
                  <li> <%= link_to category.name, category_path(category) %></li> 
                     <% end %> 
                   <hr>
 
                   
-                     <% Category.where(parent_id: 24).each do |category| %>
+                     <% Category.where.not(parent_id: 1).each do |category| %>
                    <li> <%= link_to category.name, category_path(category) %>
                     <% end %> 
                    </li> 
                    
-                     <% Category.where(parent_id: nil).each do |category| %>
-                   <li> <%= link_to category.name, category_path(category) %></li> 
-                    <% end %> 
                     </ul>
         
              
