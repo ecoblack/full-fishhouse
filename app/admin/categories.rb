@@ -1,5 +1,5 @@
 ActiveAdmin.register Category do
-		permit_params :name, :body,:parent_id, 
+		permit_params :name, :body
 
 		show do |t|
 			attributes_table do

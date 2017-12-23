@@ -19,6 +19,7 @@ class CategoriesController < ApplicationController
 
   # GET /categories/1/edit
   def edit
+    @categories = Category.all.map{|c| [ c.name, c.id ] }
   end
 
   # POST /categories
@@ -69,6 +70,9 @@ class CategoriesController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def category_params
-      params.fetch(:category, {})
+      params.require(:category).permit(:name, :body, :parent_id)
     end
+
+    
+
 end
