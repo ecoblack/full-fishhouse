@@ -6,7 +6,7 @@ ActiveAdmin.register Category do
 				row :name
 				row :parent_id
 				row :body
-				end
+				
 			end
 		end
 
