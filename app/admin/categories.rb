@@ -1,12 +1,14 @@
 ActiveAdmin.register Category do
-		permit_params :name, :body
+		permit_params :name, :body,:parent_id, :image
 
 		show do |t|
 			attributes_table do
 				row :name
 				row :parent_id
 				row :body
-				
+				row :image do
+					category.image? ? image_tag(category.image.url, height: '100') : content_tag(:span, "No photo yet")
+				end
 			end
 		end
 
@@ -15,6 +17,7 @@ ActiveAdmin.register Category do
 				f.input :name
 				f.input :parent_id
 				f.input :body
+				f.input :image, hint: f.category.image? ? image_tag(category.image.url, height: '100') : content_tag(:span, "Upload JPG/PNG/GIF image")
 			end
 			f.actions
 		end
