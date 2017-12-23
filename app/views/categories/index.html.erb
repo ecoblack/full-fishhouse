@@ -40,15 +40,15 @@
     /*width: 400px;*/
     overflow: hidden;">
     
-            
+             <h4><%= link_to category.name, category %></h4>
               <div class="portfolio-item-caption d-flex position-absolute h-100 w-100">
                 <div class="portfolio-item-caption-content my-auto w-100 text-center text-white">
-                <h4><%= link_to category.name, category %></h4>
+                
                 </div>
               </div>
               <%= image_tag category.image, class: 'img-responsive', style: "
     width: 100%;" %>
-          
+         
           </div>
           
             <% end %> 
