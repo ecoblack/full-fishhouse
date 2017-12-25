@@ -10,7 +10,7 @@ class ProductsController < ApplicationController
   # GET /products/1
   # GET /products/1.json
   def show
-    @products = Product.all
+    @product = Product.find(params[:id])
     @products = Product.order("created_at desc").limit(3).offset(1)
   end
 
