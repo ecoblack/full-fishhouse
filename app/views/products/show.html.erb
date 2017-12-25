@@ -38,8 +38,8 @@
             
             <div class="col-sm-3 col-xs-6">
                 <%= link_to product_path(product) do %> 
-                  <%= image_tag @product.image, class: 'img-responsive portfolio-item', style: 'display:block;' %>
-                  <%= @product.name %>
+                  <%= image_tag product.image, class: 'img-responsive portfolio-item', style: 'display:block;' %>
+                  <%= product.name %>
                 <% end %>
             </div>
         <% end %>
