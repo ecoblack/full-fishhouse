@@ -23,8 +23,10 @@ gem 'jbuilder', '~> 2.5'
 # gem 'bcrypt', '~> 3.1.7'
 gem 'devise'
 gem 'activeadmin'
-
-gem "paperclip", "~> 5.0.0"
+gem 'ransack'
+gem 'paperclip', "~> 5.0.0"
+gem 'friendly_id', '~> 5.1.0', :require => false
+gem 'babosa'
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platform: :mri

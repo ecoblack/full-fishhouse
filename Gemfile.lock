@@ -57,6 +57,7 @@ GEM
     arel (7.1.4)
     autoprefixer-rails (7.1.6)
       execjs
+    babosa (1.0.2)
     bcrypt (3.1.11)
     bindex (0.5.0)
     bootstrap-sass (3.3.7)
@@ -106,6 +107,8 @@ GEM
     formtastic (3.1.5)
       actionpack (>= 3.2.13)
     formtastic_i18n (0.6.0)
+    friendly_id (5.1.0)
+      activerecord (>= 4.0.0)
     globalid (0.4.1)
       activesupport (>= 4.2.0)
     has_scope (0.7.1)
@@ -262,6 +265,7 @@ PLATFORMS
 
 DEPENDENCIES
   activeadmin
+  babosa
   bootstrap-sass (~> 3.3.7)
   byebug
   capistrano
@@ -271,6 +275,7 @@ DEPENDENCIES
   capistrano3-puma
   coffee-rails (~> 4.2)
   devise
+  friendly_id (~> 5.1.0)
   jbuilder (~> 2.5)
   jquery-rails
   listen (~> 3.0.5)
@@ -278,6 +283,7 @@ DEPENDENCIES
   pg
   puma (~> 3.0)
   rails (~> 5.0.3)
+  ransack
   sass-rails (~> 5.0)
   spring
   spring-watcher-listen (~> 2.0.0)

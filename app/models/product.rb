@@ -7,7 +7,9 @@ class Product < ApplicationRecord
 
 	belongs_to :category, required: false
 
-
+	def to_param
+    	"#{id} #{name}".to_slug.normalize(transliterations: :russian).to_s 
+  	end
   	
 end
 
