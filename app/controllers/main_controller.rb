@@ -1,19 +1,15 @@
 class MainController < ApplicationController
-	before_action :force_json, only: :search 
+	before_action :force_json, only: :search
 
 	def search
-		@categories = Category.ransack(name_cont: params[:a]).result(distinct: true).limit(5)
-		@products = Product.ransack(name_cont: params[:a]).result(distinct: true).limit(5)
+		@products = Product.ransack(name_cont: params[:q]).result(distinct: true)
+		@categories = Category.ransack(name_cont: params[:q]).result(distinct: true)
 	end
 
 
-	
+	private
 
-#code 
-
-private 
-
-    def force_json 
-        request.format = :json 
-    end 
+	def force_json
+		request.format = :json
+	end
 end

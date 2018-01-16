@@ -9,4 +9,6 @@ class Category < ApplicationRecord
 	def to_param
 	    "#{id} #{name}".to_slug.normalize(transliterations: :russian).to_s 
 	end
+
+
 end
