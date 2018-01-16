@@ -18,3 +18,6 @@
 //= require_tree .
 
 
+  $( function() {
+    $( "#accordion" ).accordion();
+  } );
