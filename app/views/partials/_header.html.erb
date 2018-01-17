@@ -43,16 +43,24 @@
 
 <!-- Navbar search form rails-->
    
-         <form class="navbar-form navbar-right" style="overflow: visible;">
+      <ul class="nav navbar-nav navbar-right">
+         
+    <li><form class="navbar-form navbar-right">
                 <%= form_tag('/search', local: true, method: :get, class: 'form-inline') do %>
                 <%= text_field_tag(:q, nil, data: { behavior: 'autocomplete' }, placeholder: 'Поиск...', class: 'form-control mr-sm-2') %>
                 <%= button_tag(class: "btn btn-primary btn-sm", type: "submit", name: nil) do %>
                       <i class="glyphicon glyphicon-search"></i>
                       <% end %>
                   <% end %>
-   </form>
-      
-      
+          </form>   </li>
+
+
+          <li><a href="#"><span class="glyphicon glyphicon-user"></span> Регистрация</a></li>
+          <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Войти</a></li>
+          
+      </ul>
+
+
     </div>
   </div>
 </nav>
