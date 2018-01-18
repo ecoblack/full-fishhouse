@@ -1,8 +1,8 @@
 <div>
-	<ul class="breadcrumb">
+<ul class="breadcrumb">
   <li><a href="/"><%= link_to "Категории", categories_path   %></a></li>
   <li><a href="#"><%= link_to  @product.category.name, category_path(@product.category_id) %></a></li>
-  <li><%=  link_to @product.name, product_path %></li>
+  <li><%=  link_to @product.name, product_path %></li> 
 </ul>
 	<p id="notice"><%= notice %></p>
 
@@ -19,11 +19,17 @@
   <%= @product.body %>
 </p>
 <p>
+  <strong>Цена:</strong>
+  <%= @product.price %>
+</p>
+<p>
   <strong>Где купить:</strong>
   <%= @product.shops %>
 </p>
+ <p> <button type="button" class="btn btn-info">Добавить в корзину</button></p>
 <hr>
-<p><%= link_to 'Назад', category_path(@product.category_id) %> </p>
+
+<p><%= link_to 'Назад', category_path(@product.category) %> </p>
 </div>
 </div>
     <!-- /.row -->

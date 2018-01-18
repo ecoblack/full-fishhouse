@@ -1,4 +1,4 @@
-<%= form_for(product) do |f| %>
+<%= form_for(@product) do |f| %>
   <% if product.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(product.errors.count, "error") %> prohibited this product from being saved:</h2>
@@ -21,7 +21,14 @@
     <%= f.text_field :body %>
   </div>
 
-  <div class="actions">
+ <div class="field">
+    <%= f.label :shops %>
+    <%= f.text_field :shops %>
+  </div>
+
+
+
+  <div class="actions" style="max-width: 200px;">
     <%= f.submit %>
   </div>
 <% end %>

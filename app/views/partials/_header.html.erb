@@ -48,8 +48,8 @@
     <li><form class="navbar-form navbar-right">
                 <%= form_tag('/search', local: true, method: :get, class: 'form-inline') do %>
                 <%= text_field_tag(:q, nil, data: { behavior: 'autocomplete' }, placeholder: 'Поиск...', class: 'form-control mr-sm-2') %>
-                <%= button_tag(class: "btn btn-primary btn-sm", type: "submit", name: nil) do %>
-                      <i class="glyphicon glyphicon-search"></i>
+            <!--    <%= button_tag(class: "btn btn-primary btn-sm", type: "submit", name: nil) do %>
+                      <i class="glyphicon glyphicon-search"></i> -->
                       <% end %>
                   <% end %>
           </form>   </li>

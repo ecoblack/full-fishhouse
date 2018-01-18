@@ -1,6 +1,6 @@
 json.products do
 	json.array!(@products) do |product|
-	json.name product.name
+	json.name "#{product.name} <br> в категории: #{product.category.name}"
 	json.url product_path(product)
 	end
 end
