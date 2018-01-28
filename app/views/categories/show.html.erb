@@ -17,9 +17,7 @@
  <div class="row">  
 <% Product.where(category_id: @category.id).each do |product| %>
          
-           <div class="col-md-6 col-lg-4" style="height: 250px;
-    /*width: 400px;*/
-    overflow: hidden;">
+           <div class="col-md-6 col-lg-4" style="height: 250px; overflow: hidden;">
             
         
             
@@ -28,11 +26,11 @@
                  <h5><%= link_to product.name, product %></h5>
                 </div>
               </div>
-              <%= image_tag product.image, class: 'img-responsive', style: "
-    width: 100%;" %>
+
+              <%= image_tag product.image, style: "width: 100%;" %>
          
           </div>
-          
+
           
             <% end %> 
       </div>
@@ -43,4 +41,5 @@
 
 
    
-<div style="margin-left:5%!important;"><%= link_to 'Назад', categories_path, style: "text-decoration:underline;" %></div>
+<div style="margin-left:5%!important;">
+  <%= link_to 'Назад', categories_path, style: "text-decoration:underline;" %></div>
