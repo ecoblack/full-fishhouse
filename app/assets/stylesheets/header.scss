@@ -45,6 +45,9 @@ li a:hover {
   .about p {
       font-size: 22px;
   }
+   #header li {
+         margin:25px;
+  }
 }
     /* T A B L E T */
 @include breakpoint(tablet) {
