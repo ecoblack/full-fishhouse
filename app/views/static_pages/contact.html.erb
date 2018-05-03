@@ -1,10 +1,66 @@
 <% provide(:title, "Контакты") %>
- <div class="container"><h1>Контакты</h1>
+
+
+<style>
+body {font-family: Arial;}
+
+/* Style the tab */
+.tab {
+    overflow: hidden;
+    border: 1px solid #ccc;
+    background-color: #f1f1f1;
+}
+
+/* Style the buttons inside the tab */
+.tab button {
+    background-color: inherit;
+    float: left;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 14px 16px;
+    transition: 0.3s;
+    font-size: 17px;
+}
+
+/* Change background color of buttons on hover */
+.tab button:hover {
+    background-color: #ddd;
+}
+
+/* Create an active/current tablink class */
+.tab button.active {
+    background-color: #ccc;
+}
+
+/* Style the tab content */
+.tabcontent {
+    display: none;
+    padding: 6px 12px;
+    border: 1px solid #ccc;
+    border-top: none;
+}
+</style>
+
+
+<h1>Контакты</h1>
+
+<p>Нажмите на название торговой точки чтобы увидеть контакты и адрес:</p>
+
+<div class="tab">
+  <button class="tablinks" onclick="openCity(event, 'sumskoy')">Сумской Рынок</button>
+  <button class="tablinks" onclick="openCity(event, 'pole')">Павлово Поле</button>
+  <button class="tablinks" onclick="openCity(event, 'konniy')">Конный Рынок</button>
+  <button class="tablinks" onclick="openCity(event, 'XT3')">ХТЗ</button>
+  <button class="tablinks" onclick="openCity(event, 'solly')">Рынок Солли+</button>
+</div>
+
+<div id="sumskoy" class="tabcontent">
  <h3> Fish House на Сумском Рынке </h4>
     
 
     
-    <p><br>	
+    <p><br> 
       Харьков, ул. Культуры 8<br>
       Торговое место №133/134. <br>
       09:00-21:00 <br>
@@ -12,21 +68,25 @@
       +38-063-55-77-333<br></p>
       <%= render "partials/map" %>
       
-<hr>
-    <h3> Fish House на рынке "Павлово Поле" </h3>
- 	
- 	
- 	<p>  
-		<br>
-		Харьков, ул. 23 Августа 30.<br>
-		Торговое место 104<br>
-		09:00-18:00<br>
+</div>
+
+<div id="pole" class="tabcontent">
+  <h3> Fish House на рынке "Павлово Поле" </h3>
+  
+  
+  <p>  
+    <br>
+    Харьков, ул. 23 Августа 30.<br>
+    Торговое место 104<br>
+    09:00-18:00<br>
     Без выходных.<br>
     +38-066-66-77-778<br>  
     </p>
    <%= render "partials/map2" %>
-    <hr>
-    <h3>Fish House на Конном Рынке</h3>
+</div>
+
+<div id="konniy" class="tabcontent">
+ <h3>Fish House на Конном Рынке</h3>
         <p><br>Харьков, пл. Защитников Украины 1<br>
     Конный рынок, Рыбный ряд <br>
     Торговые места:<br>
@@ -37,8 +97,10 @@
     +38-066-66-77-778<br> 
  
   <%= render "partials/map3" %>
-  <hr>
-  <h3>Fish House Рыбная лавка</h3>
+</div>
+
+<div id="XT3" class="tabcontent">
+<h3>Fish House Рыбная лавка</h3>
     
     <p><br>Харьков, пр. Александровский (бывш. пр. Косиора) 144<br>
     магазин "Авоська"<br>
@@ -46,8 +108,10 @@
      +38-066-66-77-778
           </p>
           <%= render "partials/map4" %>
-         <hr>
-        <h3>Full Fish House на Салтовке</h3>
+</div>
+
+<div id="solly" class="tabcontent">
+ <h3>Full Fish House на Салтовке</h3>
         <p> <br>   Харьков, м. Героев Труда<br>
           ул. Академика Павлова, 323<br>
           Рынок "Солли Плюс"<br>
@@ -56,5 +120,22 @@
                  +38-066-66-77-778
          </p>
           <%= render "partials/map5" %>
-        </div>
-    
+
+</div>
+
+<script>
+function openCity(evt, cityName) {
+    var i, tabcontent, tablinks;
+    tabcontent = document.getElementsByClassName("tabcontent");
+    for (i = 0; i < tabcontent.length; i++) {
+        tabcontent[i].style.display = "none";
+    }
+    tablinks = document.getElementsByClassName("tablinks");
+    for (i = 0; i < tablinks.length; i++) {
+        tablinks[i].className = tablinks[i].className.replace(" active", "");
+    }
+    document.getElementById(cityName).style.display = "block";
+    evt.currentTarget.className += " active";
+}
+</script>
+

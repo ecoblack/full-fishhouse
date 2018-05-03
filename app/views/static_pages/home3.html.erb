@@ -1,0 +1,140 @@
+
+  <!-- Page Content -->
+
+
+<div class="container" >
+  <div class="row">
+        <div class="col-md-7" style="margin-right:-15%">
+          <%= image_tag image_url('logo.png'), class: 'img-responsive', size: "300x200", style: "position:static;top: 50%;
+    left: 50%;" %>
+                </div>
+        <div class="col-md-5">
+          
+         <p><strong>Full Fish House Рыбный Дом</strong> — это огромный выбор свежей, мороженой, соленой, вяленой рыбы, крабов, креветок, икры на развес, живые раки и консервы в ассортименте. Рыба собственного горячего и холодного копчения на стружке ольхи.   </p>
+        </div>
+      </div>
+
+
+
+<div style="margin-left: 4%!important;border-style:none!important;">
+ 
+    
+   
+  
+<ul class="breadcrumb" style="background: transparent;">
+ 
+    <% @categories.each do |category| %>
+
+     <% if category.id != 24 &&  category.id != 25 %>
+              
+        <li style="font-size: 1.2em;text-shadow: 0.75px 0.5px lightblue;; "><%= link_to category.name, category %> </li>
+        
+        <% end %>
+         <% end %> 
+    </ul>  
+    
+ </div>
+</div>
+  
+
+  <div class="container">
+<div id="accordion">
+  <h3 style="line-height: 1.4!important;background-color:#e8f4f8;">Full Fish House на Сумском Рынке</h3>
+  <div class="row">
+        <div class="col-md-7">
+          <%= image_tag image_url('shop1.png'), class: 'img-responsive', size: "400x300" %>
+        </div>
+        <div class="col-md-5">
+          
+         <p>Огромный выбор свежей, охлажденной и свежемороженой рыбы. Раки. Суши из свежей рыбы. <br>Рыба собственного копчения. Курица гриль из пароконвектомата.<br>
+                Харьков, ул. Культуры 8.
+                Торговые места 133, 134 <br>
+                09:00-21:00 Без выходных <br>
+                +38-063-55-77-333 </p>    
+        </div>
+      </div>
+  <h3 style="line-height: 1.4!important;background-color:#e8f4f8;">Full Fish House на Рынке "Павлово Поле"</h3>
+  <div class="row">
+        <div class="col-md-7">
+           <%= image_tag image_url('shop2.png'), class: 'img-responsive', size: "400x300" %>
+        </div>
+        <div class="col-md-5">
+          
+          <p>
+            Огромный выбор охлажденной и живой рыбы. Раки. <br>
+            Харьков, ул. 23 Августа 30. <br>
+            Торговое место 104<br>
+            09:00-18:00 Без выходных<br>
+            +38-066-66-77-778</p>
+      
+        </div>
+      </div>
+  <h3 style="line-height: 1.4!important;background-color:#e8f4f8;">Full Fish House на Конном рынке</h3>
+  <div>
+    <div class="row">
+        <div class="col-md-7">
+          <%= image_tag image_url('shop2.png'), class: 'img-responsive', size: "400x300" %>
+        </div>
+        <div class="col-md-5">
+         
+        <p>  Огромный выбор охлажденной и живой рыбы. Раки.<br>
+          Харьков, м. Защитников Украины<br>
+          Конный рынок, рыбный ряд<br>
+          Торговые места:<br>
+          01-10-3, 02-10-4, 02-10-5,<br>
+          02-10-10, 02-10-11, 02-10-12,<br>
+          02-10-13, 02-10-14<br>
+          08:00-15:00 Выходной понедельник<br>
+          +38-066-66-77-778</p>
+        </div>
+      </div>
+   
+  </div>
+  <h3 style="line-height: 1.4!important;background-color:#e8f4f8;">Fish House на ХТЗ</h3>
+  <div>
+    <div class="row">
+
+        <div class="col-md-7">
+          <div class="col-md-7">
+          <%= image_tag image_url('shop3.png'), class: 'img-responsive', size: "400x300" %>
+        </div>
+        </div>
+        <div class="col-md-5">
+          
+          <p>Огромный выбор свежей, копченой<br>
+            и свежемороженой рыбы. Раки.<br>
+            Харьков, пр. Александровский<br>
+            (бывш. Косиора) 144,<br>
+            магазин "Авоська"<br>
+            08:00-21:00 Без выходных<br>
+            +38-066-66-77-778</p>
+       </div>
+     
+    </div>
+     
+     
+  </div>
+  <h3 style="line-height: 1.4!important;background-color:#e8f4f8;">Full Fish House на Салтовке</h3>
+  <div>
+     <!-- /.row -->
+      <!-- Project Five -->
+      <div class="row">
+        <div class="col-md-7">
+          <%= image_tag image_url('shop2.png'), class: 'img-responsive', size: "400x300" %>
+        </div>
+        <div class="col-md-5">
+         <br>
+         <p> Огромный выбор живой и свежемороженой рыбы. Раки.<br>
+          Харьков, м. Героев Труда<br>
+          ул. Академика Павлова, 323<br>
+          Рынок "Солли Плюс"<br>
+          Торговое место 01-11-41<br>
+          09:00-18:00 Без выходных<br>
+          +38-066-66-77-778</p>
+         </p>
+        </div>
+      </div>
+  </div>
+</div>
+ 
+</div>

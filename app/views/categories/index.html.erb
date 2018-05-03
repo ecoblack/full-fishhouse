@@ -4,9 +4,9 @@
 
 
 
-<h2>Категории продукции</h1>
+<h1 style="font-family: 'Open Sans', sans-serif; font-style: oblique;">Категории продукции:</h1>
 
-<div style="margin-left: 4%!important;border-style:none!important;">
+<div>
  
     
    
@@ -27,34 +27,28 @@
 </div>
 
 <br>
-         
 
 
-           
-<section>
-      <div class="container">
-        
-        <hr>
-        <div class="row">
-            <% @categories.each do |category| %>
 
-       
-          <div class="col-md-6 col-lg-4" style="height: 250px;
-    /*width: 400px;*/
-    overflow: hidden;">
-    
-             <h4><%= link_to category.name, category %></h4>
-              <div class="portfolio-item-caption d-flex position-absolute h-100 w-100">
-                <div class="portfolio-item-caption-content my-auto w-100 text-center text-white">
-                
-                </div>
-              </div>
-              <%= image_tag category.image, class: 'img-responsive', style: "
-    width: 100%;" %>
-         
-          </div>
-          
-            <% end %> 
-      </div>
-          
-</section>
+
+<div class="grid">
+  <% @categories.each do |category| %>
+
+    <div class="img-item" style="position: relative;">
+
+      <%= link_to (image_tag(category.image, class: 'img-responsive', style: "height:100%;")), category,  class: 'gallery' %> 
+
+     <%= link_to(category, class: 'project-link') do %> 
+        <div class="onhover">
+            
+             <p class="brand"><%= category.name.upcase %></p>
+
+        </div>
+
+    <% end %> 
+</div>
+   
+ 
+  <% end %> 
+
+</div>

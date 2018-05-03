@@ -6,7 +6,10 @@
 
   <body>
 	<%= render "partials/header" %>
-  	<%= yield %>
-    <%= render "partials/footer" %>
+	<div id="maincontent">
+  		<%= yield %>
+  		<%= render "partials/footer" %>
+  	</div>
+    
   </body>
 </html>

@@ -7,39 +7,38 @@
 </ul>
 <!-- Breadcrumbs end -->
  
-<h3> Продукция категории </h3>
+<h1> Продукция категории </h1>
 
 
 <!-- <input type="text" id="myInput" onkeyup="myFunction()" style="max-width: 33%;margin-left:15%" placeholder="Поиск продукции..."> -->
-<section>
-
-      <div class="container">
- <div class="row">  
-<% Product.where(category_id: @category.id).each do |product| %>
-         
-           <div class="col-md-6 col-lg-4" style="height: 250px; overflow: hidden;">
-            
-        
-            
-              <div class="portfolio-item-caption d-flex position-absolute h-100 w-100">
-                <div class="portfolio-item-caption-content my-auto w-100 text-center text-white">
-                 <h5><%= link_to product.name, product %></h5>
-                </div>
-              </div>
-
-              <%= image_tag product.image, style: "width: 100%;" %>
-         
-          </div>
-
-          
-            <% end %> 
-      </div>
-          
-</section>
 
    
+<div class="grid">
+  <% Product.where(category_id: @category.id).each do |product| %>
+
+    <div class="img-item" style="position: relative;">
+
+      <%= link_to (image_tag(product.image, class: 'img-responsive', style: "height:100%;")), product,  class: 'gallery' %> 
+
+     <%= link_to(product, class: 'project-link') do %> 
+        <div class="onhover">
+            
+             <p class="brand"><%= product.name.upcase %></p>
+
+        </div>
+
+    <% end %> 
+</div>
+   
+ 
+  <% end %> 
+
+</div>
 
 
    
-<div style="margin-left:5%!important;">
-  <%= link_to 'Назад', categories_path, style: "text-decoration:underline;" %></div>
+<div>
+  <ul class="breadcrumb">
+   <li><%= link_to 'Назад', categories_path %></li>
+   </ul>
+ </div>

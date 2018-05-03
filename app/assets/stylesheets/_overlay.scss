@@ -1,0 +1,99 @@
+/* OVERLAY MENU */
+
+
+.overlay {
+    height: 100%;
+    width: 100%;
+    display: none;
+    background-color: #000000;
+    z-index: 164534;
+    top: 0;
+    left: 0;
+ 
+    overflow-y: none;
+   
+    position:fixed !important;
+    position:absolute;
+    top:0;
+    right:0;
+    bottom:0;
+    left:0;
+}
+
+.overlay-content {
+	
+    position: relative;
+    top: 15%;
+    width: 100%;
+    
+    
+}
+
+
+.overlay a {
+  	
+    
+    text-decoration: none;
+    font-size: 22px;
+    color: #ffffff;
+    display: block;
+    transition: 0.6s;
+    padding-left: 20px;
+    -webkit-font-smoothing: antialiased;
+}
+
+.overlay a:hover, .overlay a:focus {
+    color: #f1f1f1;
+    text-decoration: underline;
+}
+
+.overlay .closebtn {
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    font-size: 19px;
+    padding: 20px
+}
+
+
+.overlay .social {
+
+margin:20px;
+font-size: 18px;
+font-weight: 100;
+word-spacing: 10px;
+-webkit-font-smoothing: antialiased;
+position: fixed;
+bottom: 40px;
+}
+
+@media screen and (max-height: 450px) {
+  .overlay a {font-size: 20px}
+  .overlay .closebtn {
+    font-size: 30px;
+    top: 10px;
+    right: 20px;
+  }
+}
+
+#menu {
+  	float:right;
+  	color:white;
+	font-size: 19px;
+    
+    
+    z-index: 0;
+    
+    -webkit-font-smoothing: antialiased;
+}
+
+
+
+@media screen and (max-width: 800px) {
+  .static h1 {font-size: 36px}
+ 
+}
+@media screen and (max-width: 600px) {
+  .static h1 {font-size: 34px}
+ 
+}
