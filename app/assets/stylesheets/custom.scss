@@ -81,6 +81,9 @@ body {
   #header li {
    
 }
+.brand {
+  font-size: 24px;
+}
 }
 
     /* P H A B L E T */
@@ -88,13 +91,18 @@ body {
 #header li {
    
 }
+.brand {
+  font-size: 22px;
+}
 }
     /* M O B I L E */
 @include breakpoint(mobileonly) {
   #footer {
 
   }
-
+  .brand {
+font-size: 19px;
+}
  #header li {
          
   }
