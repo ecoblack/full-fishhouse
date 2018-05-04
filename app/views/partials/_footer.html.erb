@@ -1,4 +1,23 @@
 
 <div id="footer">
-   <p><%= current_year = Time.new.year %>. Full Fish House Харьков © </p>
+  <div class="footer-left">
+		<p><%= current_year = Time.new.year %>. Full Fish House Харьков © </p>
+  </div>
+
+<div class="footer-right">
+	<p class="to-top" style="float:left;">Наверх</p>	<a id="to-top">^</a>
+  </div>
+
 </div>
+
+
+
+
+
+<script>
+$('#to-top, .to-top').click(function() {      // When arrow is clicked
+    $('body,html').animate({
+        scrollTop : 0                       // Scroll to top of body
+    }, 500);
+});
+</script>

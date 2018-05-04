@@ -59,7 +59,7 @@ body {
       font-size: 22px;
   }
    #header li {
-         margin:25px;
+         
   }
   .about-info {
   width: 88%;
@@ -78,11 +78,16 @@ body {
     margin-right:20px;
     margin-left:20px;
   }
+  #header li {
+   
+}
 }
 
     /* P H A B L E T */
 @include breakpoint(phablet) {
-
+#header li {
+   
+}
 }
     /* M O B I L E */
 @include breakpoint(mobileonly) {
@@ -91,10 +96,16 @@ body {
   }
 
  #header li {
-         margin-top:20px;
+         
   }
   #maincontent {
     margin-right:20px;
     margin-left:20px;
+  }
+  #footer {
+  font-size: 13px;
+  }
+  .to-top {
+  display:none;
   }
 }
