@@ -10,6 +10,7 @@ Rails.application.routes.draw do
 
   get  '/about',   to: 'static_pages#about'
   get  '/contact', to: 'static_pages#contact'
+  get  '/horeca',   to: 'static_pages#horeca'
   get :autocomplete, controller: :main
   get :search, controller: :main 
 

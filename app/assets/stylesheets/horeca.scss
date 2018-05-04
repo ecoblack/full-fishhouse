@@ -1,0 +1,64 @@
+.horeca-wrapper {
+	margin: 20px 40px;
+}
+
+.horeca-list {
+	margin: 20px 40px;
+}
+
+
+h3, p, li {
+font-family: 'Open Sans', sans-serif;
+}
+
+.horeca-list {
+  background-color: #ff00ff;
+}
+
+
+
+/* B R E A K P O I N T S */
+
+/* Universal */
+
+ @mixin breakpoint($point) {
+   @if $point == desktop {
+     @media (min-width: 2550px) { @content ; }
+  }
+   @else if $point == laptop {
+     @media (min-width: 1500px) { @content ; }
+  }
+    @else if $point == tablet {
+     @media (min-width: 1000px) { @content ; }
+  }
+   @else if $point == phablet {
+     @media (min-width: 601px)  { @content ; }
+  }
+  @else if $point == mobileonly {
+     @media (max-width: 600px)  { @content ; }
+
+  }
+}
+
+/* D E S K T O P */
+@include breakpoint(desktop) {
+
+}
+
+/* L A P T O P */
+@include breakpoint(laptop) {
+  #maincontent {
+     margin: 50px;
+   
+         display: inline-grid;
+  }
+}
+/* T A B L E T */
+@include breakpoint(tablet) {
+.form-horeca {
+  display: inline-block;
+}
+#maincontent {
+
+}
+}

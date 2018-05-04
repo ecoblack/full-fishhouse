@@ -95,7 +95,7 @@
     z-index: 9;
 }
 .brandlink  {
-  display: none;
+  
 }
 
 
@@ -134,13 +134,14 @@
   right: 0;
   height: 100%;
   width: 100%;
-  opacity: 0;
+  opacity: 1;
   transition: .5s ease;
-  background-color: #000;
+  
 }
 
 .img-item:hover .onhover {
   opacity: 0.88;
+   background-color: #000;
    -webkit-box-shadow:inset 0px 0px 0px 1px #fff;
     -moz-box-shadow:inset 0px 0px 0px 1px #fff;
     box-shadow:inset 0px 0px 0px 1px #fff;
@@ -148,7 +149,7 @@
 
 .brand {
   color: white;
-  
+  font-weight:500;
   position: absolute;
   top: 50%;
   left: 50%;
