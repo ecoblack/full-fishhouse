@@ -2,29 +2,32 @@
 
 
 
-
+<div class="header">
   <div class="footer-left">
     <li class="logo-right"><a href="/" style="text-decoration:none;">FULL FISH HOUSE</a></li>
   </div>
 
 <div class="footer-right">
   <li id="menu" class="openbtn">Меню</li>
+
+  <div id="deskmenu" >
+<ul style="list-style:none;display:flex; ">
+
+    <li><%= link_to "Продукция", categories_path, class: 'nav' %></li>
+     <li><%= link_to "HoReCa", horeca_path, class: 'nav' %></li> 
+    <li><%= link_to "О Нас", about_path, class: 'nav' %></li>
+    <li><%= link_to "Контакты", contact_path, class: 'nav' %></li>
+</ul>
+ </div>
+
   </div>
 
 
 
-  
+    </div>
 
 
 
-
-  <div id="deskmenu">
-
-
-    <li><%= link_to "Продукция", categories_path, class: 'nav' %></li>
-    <li><%= link_to "О Нас", about_path, class: 'nav' %></li>
-    <li><%= link_to "Контакты", contact_path, class: 'nav' %></li>
- </div>
 
 
    
@@ -55,10 +58,13 @@
 
         <hr>
      <ul> 
+       <li><%= link_to "HoReCa", horeca_path %></li> 
       <li><%= link_to "О нас", about_path %></li> 
      <li><%= link_to "Контакты", contact_path %></li> 
       </ul>
   </div>
+
+
 
   <div class="social" style="display:none;">
    <p> INSTAGRAM&nbsp;FACEBOOK&nbsp;TELEGRAM</p>

@@ -62,3 +62,10 @@ font-family: 'Open Sans', sans-serif;
 
 }
 }
+
+
+@include breakpoint(mobileonly) {
+.horeca-body ol {   
+    padding-left: 20px;
+    }
+}

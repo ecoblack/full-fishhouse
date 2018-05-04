@@ -20,9 +20,7 @@
 li a:hover {
     color: #958f8f;
 }
-.form-horeca {
 
-}
     /* D E S K T O P */
 @include breakpoint(desktop) {
  .form-horeca, .right {
@@ -33,7 +31,7 @@ li a:hover {
 /* L A P T O P */
 @include breakpoint(laptop) {
  .form-horeca, .right {
-        width:40%;
+       
         display:inline;
   }
   .map-responsive {
@@ -51,6 +49,11 @@ li a:hover {
    #deskmenu {
   
   }
+  .header {
+  font-size: 24px;
+margin: 30px 50px 30px 50px;
+  }
+
 }
     /* T A B L E T */
 @include breakpoint(tablet) {
@@ -67,6 +70,9 @@ li a:hover {
   #deskmenu {
   
   }
+  .header {
+  margin: 30px 30px 30px 30px;
+  }
 }
 
     /* P H A B L E T */
@@ -74,6 +80,7 @@ li a:hover {
    deskmenu {
         display:inline;
   }
+ 
 }
     /* M O B I L E */
 @include breakpoint(mobileonly) {
@@ -84,9 +91,15 @@ li a:hover {
   #maincontent {
     margin-top: 100px;
   }
+  .logo-right a {
+  font-size:19px;
+  }
   #header {
 
   margin:0;
+  }
+  .header {
+  margin: 20px 20px 20px 20px;
   }
 }
 
@@ -122,7 +135,7 @@ height: 60px;
     width: 100vw;
     top: 0;
 
-
+    margin: 0;
 }
 
 /* NAVIGATION LINKS RIGHT */
@@ -139,7 +152,9 @@ ul {
 }
 
 
-
+#header li ~ li {
+padding-left: 16px;
+}
 
 
 li a {
@@ -147,7 +162,7 @@ li a {
     color: white;
     text-decoration: none;
     -webkit-font-smoothing: antialiased;
-    line-height: 1;
+    
 }  
 
 #header li.active a {
@@ -165,7 +180,7 @@ li a {
 
 
 
-@media only screen and (max-width: 419px) { 
+@media only screen and (max-width: 519px) { 
   #deskmenu { 
     display: none; 
   } 
@@ -173,7 +188,7 @@ li a {
 
 
 
-@media screen and (min-width: 420px) {
+@media screen and (min-width: 520px) {
   #menu  { display: none; 
   }
 }
