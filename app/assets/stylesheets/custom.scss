@@ -10,6 +10,91 @@ body {
 }
 
 
-.about-info {
+
+
+ @mixin breakpoint($point) {
+   @if $point == desktop {
+     @media (min-width: 1440px) { @content ; }
+  }
+   @else if $point == laptop {
+     @media (min-width: 1025px) { @content ; }
+  }
+    @else if $point == tablet {
+     @media (max-width: 1024px) { @content ; }
+  }
+   @else if $point == phablet {
+     @media (min-width: 568px)  { @content ; }
+  }
+  @else if $point == mobileonly {
+     @media (max-width: 567px)  { @content ; }
+
+  }
+}
+
+
+    /* D E S K T O P */
+@include breakpoint(desktop) {
+ .form-horeca, .right {
+        ;
+  }
+
+}
+/* L A P T O P */
+@include breakpoint(laptop) {
+  #maincontent {
+    margin-right:50px;
+    margin-left:50px;
+  }
+ .form-horeca, .right {
+        width:40%;
+        display:inline;
+  }
+  .map-responsive {
+  min-width:100%;
+  }
+  .about {
+  width:70%;
+  }
+  .about p {
+      font-size: 22px;
+  }
+   #header li {
+         margin:25px;
+  }
+  .about-info {
   width: 88%;
+}
+}
+    /* T A B L E T */
+@include breakpoint(tablet) {
+ .form-horeca, .right {
+        display:inline-block;
+        width:100%;
+  }
+  .contact-form {
+  display:inline;
+  }
+    #maincontent {
+    margin-right:20px;
+    margin-left:20px;
+  }
+}
+
+    /* P H A B L E T */
+@include breakpoint(phablet) {
+
+}
+    /* M O B I L E */
+@include breakpoint(mobileonly) {
+  #footer {
+
+  }
+
+ #header li {
+         margin-top:20px;
+  }
+  #maincontent {
+    margin-right:20px;
+    margin-left:20px;
+  }
 }
