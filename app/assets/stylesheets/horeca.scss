@@ -47,11 +47,7 @@ font-family: 'Open Sans', sans-serif;
 
 /* L A P T O P */
 @include breakpoint(laptop) {
-  #maincontent {
-     margin: 50px;
-   
-         display: inline-grid;
-  }
+  
 }
 /* T A B L E T */
 @include breakpoint(tablet) {
