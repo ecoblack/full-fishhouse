@@ -9,7 +9,9 @@ body {
   margin-top: 100px;
 }
 
-
+.about-info {
+      text-align: justify;
+}
 
 
  @mixin breakpoint($point) {
