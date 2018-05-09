@@ -1,4 +1,4 @@
-<div>
+<div class="product-show">
 <ul class="breadcrumb">
   <li><a href="/"><%= link_to "Категории", categories_path   %></a></li>
   <li><a href="#"><%= link_to  @product.category.name, category_path(@product.category_id) %></a></li>
@@ -6,15 +6,18 @@
 </ul>
 	<p id="notice"><%= notice %></p>
 
- <div class="row" style="margin-right:3%!important;">
-<p>
-  <h3><%= @product.name %></h3>
-  
-</p>
-<div class="col-md-8" style="margin-left:10%!important; margin-right:5%!important;max-width:555px;">
+
+
+
+
+ <header><h2><%= @product.name %></h2></header>
+
+
+  <div class="product-image" style="margin-left:10%!important; margin-right:5%!important;max-width:555px;">
             <%= image_tag @product.image, class: 'img-responsive', style: 'display:block; width: 75%; height:auto;' %>
         </div>
-<p>
+
+  <div class="product-info"><p>
   <strong>Описание:</strong>
   <%= @product.body %>
 </p>
@@ -27,26 +30,28 @@
   <%= @product.shops %>
 </p>
  <p> <button type="button" class="btn btn-info">Добавить в корзину</button></p>
-<hr>
 
-<p><%= link_to 'Назад', category_path(@product.category) %> </p>
-</div>
 </div>
 
 
+</div>
 
-    <!-- /.row -->
-      <div class="col-lg-12">
-            <h3 class="page-header">Также в ассортименте:</h3>
-        </div>
-    <!-- Related Projects Row -->
-    <div class="row">
+
+<div style="width:100%;height:50px;    float: left;border-top: 1px solid #eaeaea;"><h4 class="page-header">Также в ассортименте:</h4>
+</div>
+
+
+
+
+
+<!-- Related Projects Row -->
+    <div class="flex-container wrap">
 
       
 
         <% @products.each do |product| %>
             
-            <div class="col-sm-3 col-xs-6">
+            <div class="flex-item">
                 <%= link_to product_path(product) do %> 
                   <%= image_tag product.image, class: 'img-responsive portfolio-item', style: 'display:block; max-height: 200px;' %>
                   <%= product.name %>
@@ -55,4 +60,3 @@
         <% end %>
 
     </div>
-    <!-- /.row -->

@@ -52,49 +52,30 @@
 
 
 
-<div class="contact-form">
 
-                <div class="form-horeca">
+  
 
-                    <form action="/ua/horeca/SaveApplication" class="form-horeca form-horeca-bottom" id="form-horeca-bottom" style="float:left;">
-                        <p>
-                           Отправьте онлайн заявку, и наш менеджер свяжется с Вами для обсуждения деталей потенциального сотрудничества.
-
-                        </p>
-                        <div>
-                            <input type="text" name="name" placeholder="Ваша фамилия и имя" class="required">
-                            <input type="text" name="phone" id="phone" placeholder="Контактный телефон" class="required phone">
-                        </div>
-                        <div>
-                            <input type="text" name="company" placeholder="Название заведения" class="required">
-                            <input type="text" name="email" id="email" placeholder="example@mail.com" class="required mail">
-                        </div>
-
-                       
-                            <div class="select">
-                                <span class="select-btn"></span>
-                                <input type="text" name="city" id="city" placeholder="Город" class="required city" autocomplete="off">
-                            </div>
-
-                        <div class="submit-wr">
-                            <button type="submit" class="submit-horeca" id="submit-horeca-bottom">Стать клиентом</button>
-                           
-                        </div>
-                    </form>
+  <div id="form-div" style="position:relative;">
+    <form class="form" id="form1">
+      
+      <p class="name">
+        <input name="name" type="text" class="validate[required,custom[onlyLetter],length[0,100]] feedback-input" placeholder="Ваше имя" id="name" />
+      </p>
+      
+      <p class="email">
+        <input name="email" type="text" class="validate[required,custom[email]] feedback-input" id="email" placeholder="Контактный email/номер телефона" />
+      </p>
+      
+      <p class="text">
+        <textarea name="text" class="validate[required,length[6,300]] feedback-input" id="comment" placeholder="Название заведения/комментарий"></textarea>
+      </p>
+      
+      
+      <div class="submit">
+        <input type="submit" value="Стать клиентом" id="button-blue"/>
+        <div class="ease"></div>
+      </div>
+    </form>
+  </div>
 
                   <!--    <span>или</span>-->
-
-
-                    <div class="right" style="float:right;">
-                        <p>Обратитесь к нам по телефону</p>
-
-                        <div>
-                            <span>0-800-501-401</span>
-                            <a href="https://www.facebook.com/groups/1678154219116355/about/" target="_blank" class="facebook"><img src="/assets/horeca/images/facebook.png"> HoReCa Full Fish House</a>
-                        </div>
-
-                        <p class="zakaz-link">Заказываете для личных нужд? <a href="/contact" target="_blank">Контакты</a></p>
-                    </div>
-
-                    </div>
-     </div>             

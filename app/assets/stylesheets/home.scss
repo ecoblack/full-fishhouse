@@ -14,12 +14,13 @@ RESPONSIVE LAYOUT CSS
 
 @media screen and (min-width: 800px) {
 
+
   
   header {
     width: 100%;
   }
   
-  nav, section {
+  nav, section, .product-info, .product-image {
     float: left;
   }
 
@@ -64,7 +65,7 @@ body {
 
 header,
 nav,
-section {
+section, .product-info, .product-image {
 
   margin-bottom: 10px;
  
