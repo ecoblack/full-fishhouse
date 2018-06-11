@@ -6,6 +6,13 @@ Rails.application.routes.draw do
 
 
 
+  namespace :admin do
+    resources :categories
+    resources :products
+
+    root to: "categories#index"
+  end
+
   root 'static_pages#home'
 
   get  '/about',   to: 'static_pages#about'

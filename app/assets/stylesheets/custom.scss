@@ -93,6 +93,10 @@ color:white;
   .product-info {
     width: 33.125%;
   }
+  #to-top {
+    position: relative;
+    top: 25px;
+  }
 }
     /* T A B L E T */
 @include breakpoint(tablet) {
@@ -113,7 +117,10 @@ color:white;
 .brand {
   font-size: 24px;
 }
-
+  #to-top {
+    position: relative;
+    top: 15px;
+  }
 }
 
     /* P H A B L E T */
@@ -129,6 +136,10 @@ color:white;
 @include breakpoint(mobileonly) {
   #footer {
 
+  }
+  #to-top {
+    position: relative;
+    top: 12px;
   }
   .brand {
 font-size: 19px;
