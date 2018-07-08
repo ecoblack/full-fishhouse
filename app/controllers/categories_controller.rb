@@ -4,6 +4,11 @@ class CategoriesController < ApplicationController
   # GET /categories
   # GET /categories.json
   def index
+
+    @meta_title = meta_title 'Каталог продукции | Категории'
+    @meta_description = 'Comprehensive SEO Guide for Ruby on Rails Applications'
+
+
     if params[:search]
       @categories = Category.search(params[:search]).order("name")
     else

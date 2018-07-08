@@ -5,7 +5,7 @@ class ProductsController < ApplicationController
   # GET /products.json
   def index
     @products = Product.all
-
+    
   end
 
   # GET /products/1
@@ -13,6 +13,7 @@ class ProductsController < ApplicationController
   def show
     @product = Product.find(params[:id])
     @products = Product.order("RANDOM()").limit(3).offset(1)
+    @meta_title = @product.name
   end
 
   # GET /products/new

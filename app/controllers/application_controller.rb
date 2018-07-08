@@ -1,12 +1,19 @@
 class ApplicationController < ActionController::Base
   protect_from_forgery with: :exception
-	
+	after_filter :return_errors, only: [:page_not_found, :server_error]
+
+BRAND_NAME = 'Full Fish House | Рыбный Дом Харьков'.freeze
+
+  def meta_title(title)
+    [title, BRAND_NAME].reject(&:empty?).join(' | ')
+  end
+
 	def index
    		@category = Category.find(params[:id])
-  		
 	end
 
-	 after_filter :return_errors, only: [:page_not_found, :server_error]
+
+
 
     def page_not_found
          @status = 404

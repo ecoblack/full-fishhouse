@@ -28,6 +28,8 @@ gem 'paperclip', "~> 5.0.0"
 gem 'ransack'
 gem 'friendly_id', '~> 5.1.0', :require => false
 gem 'babosa'
+gem 'mail_form'
+gem 'dotenv-rails', groups: [:development, :test]
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platform: :mri
