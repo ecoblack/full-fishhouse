@@ -20,3 +20,4 @@ config/database.yml
 y
 y.pub
 public/system
+local_env.rb

@@ -17,14 +17,14 @@ Rails.application.routes.draw do
 
   get  '/about',   to: 'static_pages#about'
   get  '/contact', to: 'static_pages#contact'
- # get  '/horeca',   to: 'static_pages#horeca'
+  get  '/horeca',   to: 'static_pages#horeca'
   get :autocomplete, controller: :main
   get :search, controller: :main 
 
   resources :categories
   resources :products
-  resources :messages, only: [:index, :create] 
-  get "horeca" => "messages#index" 
+  resources :contacts, only: [:new, :create] 
+  #get  '/horeca', to: 'contacts#new'
 
   match "/404", :to => "errors#not_found", :via => :all
   match "/500", :to => "errors#internal_server_error", :via => :all
