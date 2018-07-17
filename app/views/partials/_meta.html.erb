@@ -3,8 +3,14 @@
 		    <meta name="description" content="<%= @meta_description %>">
 		  <% end %>
 		  
+
+
 	<%= favicon_link_tag asset_path('favicon.png'), :rel => 'icon', :type =>  'image/png' %>
      	<title><%= full_title(yield(:title)) %></title>
+
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+		
 
 	 	<%= csrf_meta_tags %>
 	 	
@@ -14,3 +20,4 @@
 	    <!-- JS file -->
 		<script href="assets/javascripts/jquery.easy-autocomplete.min.js"></script> 
 	    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+	    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-122015767-1"></script>

@@ -24,5 +24,14 @@ en:
   en:
   helpers:
     label:
-      post:
-        email: 'Customized title'
+      contact:
+        email: 'Ваш e-mail:'
+        name: 'Ваше имя:'
+        message: 'Сообщение'
+
+ 
+    submit:
+      contact:
+
+        create: 'Awesome create button for sdasd'
+        update: 'Even better update button %{model}'
