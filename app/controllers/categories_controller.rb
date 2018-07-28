@@ -6,7 +6,7 @@ class CategoriesController < ApplicationController
   def index
 
     @meta_title = meta_title 'Каталог продукции | Категории'
-    @meta_description = 'Comprehensive SEO Guide for Ruby on Rails Applications'
+    @meta_description = 'Рыба и морепродукты в Харькове. HoReCa. Сумской рынок, рынок Павлово Поле.'
 
 
     if params[:search]

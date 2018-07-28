@@ -21,15 +21,13 @@ gem 'jbuilder', '~> 2.5'
 # Use Redis adapter to run Action Cable in production
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
-gem 'devise'
-gem 'administrate'
 
+gem 'administrate'
 gem 'paperclip', "~> 5.0.0"
 gem 'ransack'
 gem 'friendly_id', '~> 5.1.0', :require => false
 gem 'babosa'
 gem 'mail_form'
-gem 'dotenv-rails', groups: [:development, :test]
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platform: :mri

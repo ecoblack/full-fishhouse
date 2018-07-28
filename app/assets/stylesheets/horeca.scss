@@ -41,15 +41,14 @@ font-family: 'Open Sans', sans-serif;
 
 #form-div {
   background-color:rgba(72,72,72,0.4);
-  padding-left:35px;
-  padding-right:35px;
+  margin-left:auto;
+  margin-right:auto;
   padding-top:35px;
   padding-bottom:50px;
   width: 450px;
   float: left;
   left: 50%;
   position: absolute;
-  margin-top:30px;
   margin-left: -260px;
   -moz-border-radius: 7px;
   -webkit-border-radius: 7px;
@@ -185,9 +184,11 @@ input:focus, textarea:focus {
     margin-right: 0;
     width: 100%;
     margin-left: 0;
-    padding-left: 3%;
-    padding-right: 3%;
+
   }
+    input, textarea {
+    min-width:220px;
+    }
 }
 
 /* B R E A K P O I N T S */
@@ -199,10 +200,10 @@ input:focus, textarea:focus {
      @media (min-width: 2550px) { @content ; }
   }
    @else if $point == laptop {
-     @media (min-width: 1500px) { @content ; }
+     @media (min-width: 1200px) { @content ; }
   }
     @else if $point == tablet {
-     @media (min-width: 1000px) { @content ; }
+     @media (min-width: 800px) { @content ; }
   }
    @else if $point == phablet {
      @media (min-width: 601px)  { @content ; }
@@ -224,9 +225,7 @@ input:focus, textarea:focus {
 }
 /* T A B L E T */
 @include breakpoint(tablet) {
-.form-horeca {
-  display: inline-block;
-}
+
 #maincontent {
 
 }

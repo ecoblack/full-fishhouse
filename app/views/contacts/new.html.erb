@@ -25,57 +25,47 @@
 <div class="headline">
  <h2>Желаете стать клиентом доставки?</h2>
 </div>
-
+<div class="cont">
 <div class="contact-form-wrapper">
-
-
-
-
-
-<ul class="contact-form-list" >
-  <li class="hrc" >
+  <div class="hrc" >
   	<div class="skinny_wrapper wrapper_padding" id="form-div" style="position:relative;">
 	<%= form_for @contact do |f| %>
-	<%= %>
+
 	<%= f.text_field :name, required: true, placeholder:  'Ваше имя' %>
-
-	<br>
-
-	<%=  %>
 	<%= f.email_field :email, required: true, placeholder: 'Ваш e-mail' %>
-	<br>
-	<%=  %>
 	<%= f.text_area :message, as: :text, placeholder: 'Опишите заявку. Укажите название вашего заведения или мероприятия.'%>
 
-	<div class="hidden">
-
-	<%= f.label :nickname %><br>
-	<%= f.text_field :nickname, hint: 'leave this field blank' %>
-	</div>
-	
+		<div class="hidden">
+			<%= f.label :nickname %><br>
+			<%= f.text_field :nickname, hint: 'leave this field blank' %>
+		</div>
 	<%= f.submit 'Отправить заявку', class: "button" %>
+
 	<% end %>
-</div></li>
-  <li>ffh-horeca@gmail.com <br>
-  WRITE TO OUR EMAIL <br>
-WRITE TO OUR EMAIL <br>
-WRITE TO OUR EMAIL <br>
-WRITE TO OUR EMAIL <br>
-WRITE TO OUR EMAIL <br>
-<span style="font-color:black;"><%= link_to "Контакты", contact_path, class: 'nav' %> </span><br></li>
-
-</ul>
-
-<div class="info">Resize this panel to see grids respond</div>
-
+</div></div >
 </div>
+<h5>Или
+
+<div id="contactus">Свяжитесь с нами по электронной почте:
+ <a style="color:#4c4cff;" href="mailto:ffh.com.ua@gmail.com">ffh.com.ua@gmail.com</a><br></div>
+ <br>
+<%= link_to "Позвоните нам", contact_path %>
+</div>
+ <!-- 
+  <li id="contactus">Свяжитесь с нами по электронной почте:<br>
+  <li><a style="color:aqua!important;" href="mailto:ffh.com.ua@gmail.com">ffh.com.ua@gmail.com</a><br>
+</li>
+
+
+
+
 
 
 
 
 
   
- <!-- 
+
   <div id="form-div" style="position:relative;">
     <form class="form" id="form1">
       
@@ -103,12 +93,15 @@ background-image: url('https://99px.ru/sstorage/53/2013/02/tmb_61080_9291.jpg');
 
 
 <style>
-.contact-form-list {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
-  grid-gap: 10px;
-}
 
+.contact-form-list {
+  display: inline;
+  
+  
+}
+.cont {
+	display: inline-grid;
+}
 .hrc {
   background-color: #fff;
   border-radius: 3px;
@@ -122,19 +115,18 @@ background-image: url('https://99px.ru/sstorage/53/2013/02/tmb_61080_9291.jpg');
   padding-top: 20px;
   color: #fff;
 }
-	.contact-form-wrapper {
-		display: inline;
+	#contactus {
+		margin-top: 40px;
 	}
- .new_contact {
-		
-		    display: grid;
-	}
+
 	#contact_name, #contact_email, input.button {
 		max-width: 250px;
 		margin: 10px  11px  10px 10px ;
+		float:left;
 	}
 	#contact_message {
 		margin-left: 10px;
+		float:left;
 	}
 	input.button {
 		background-color: white;
