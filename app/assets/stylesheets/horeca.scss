@@ -124,10 +124,11 @@ font-family: 'Open Sans', sans-serif;
 }
 
 textarea {
-    width: 80%;
+    width:95%;
+    max-width: 369px;
     height: 150px;
     line-height: 150%;
-    resize:vertical;
+    resize: vertical;
 }
 
 input:hover, textarea:hover,
@@ -224,10 +225,10 @@ input:focus, textarea:focus {
   
 }
 /* T A B L E T */
-@include breakpoint(tablet) {
+@include breakpoint(mobileonly) {
 
-#maincontent {
-
+input {
+      width: 95%;
 }
 }
 

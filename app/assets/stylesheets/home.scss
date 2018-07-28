@@ -3,6 +3,7 @@
   display: inline-block;
 }
 
+
 /**************************************
 RESPONSIVE LAYOUT CSS
 **************************************/
@@ -63,7 +64,7 @@ CSS TO MAKE THE EXAMPLE LOOK PRETTY
 }
 
 body {
-  
+  max-width:1900px;
   font-family: Helvetica;
   text-align: center;
   
@@ -78,6 +79,7 @@ section, .product-info, .product-image {
 }
 
 header {
+  max-width:1900px;
   padding: 20px 0;
 }
 
